@@ -23,7 +23,7 @@ Sponsored by [Formscale](https://formscale.com).
 Clone the repository:
 
 ```bash
-git clone https://github.com/dris-e/cloudflare-nextjs-template.git
+git clone https://github.com/Formscale/cloudflare-nextjs-template.git
 ```
 
 Set a database & branch name in the `config.ts` file.
