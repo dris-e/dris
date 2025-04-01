@@ -23,6 +23,7 @@
     "migrate:remote": "node scripts/migrate.js --remote",
     "migrate:apply": "node scripts/migrate.js --apply",
     "migrate:initial": "node scripts/migrate.js --initial",
+    "migrate:clear": "node scripts/migrate.js --clear",
     "list": "wrangler d1 migrations list $(node scripts/get-db.js)",
     "list:remote": "wrangler d1 migrations list $(node scripts/get-db.js) --remote",
     "apply": "wrangler d1 migrations apply $(node scripts/get-db.js) && pnpm run generate",

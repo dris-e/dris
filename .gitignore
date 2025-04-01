@@ -45,3 +45,6 @@ next-env.d.ts
 
 # types
 worker-configuration.d.ts
+
+# wrangler
+.wrangler

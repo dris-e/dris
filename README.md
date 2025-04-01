@@ -75,6 +75,12 @@ Copy your database name & ID to the `wrangler.jsonc` file.
 ]
 ```
 
+Note: If starting fresh, clear the migrations folder:
+
+```bash
+pnpm run migrate:clear
+```
+
 Add your first migration (e.g., "add_users_table"):
 
 ```bash

@@ -58,11 +58,25 @@ function createInitialMigration(name, isRemote = false, shouldApply = false) {
   baseMigration(name, isRemote, shouldApply, migrationCommand);
 }
 
+function clearMigrations() {
+  if (!fs.existsSync(MIGRATIONS_DIR)) {
+    console.error("Migrations directory not found");
+    process.exit(1);
+  }
+
+  const files = fs.readdirSync(MIGRATIONS_DIR);
+  for (const file of files) {
+    fs.unlinkSync(path.join(MIGRATIONS_DIR, file));
+  }
+  console.log("Migrations folder cleared successfully");
+}
+
 const args = process.argv.slice(2);
 const name = args.find((arg) => !arg.startsWith("--"));
 const isRemote = args.includes("--remote");
 const shouldApply = args.includes("--apply") || isRemote;
 const isInitial = args.includes("--initial");
+const shouldClear = args.includes("--clear");
 
 if (!name) {
   console.error("Please provide a migration name");
@@ -73,4 +87,9 @@ if (isInitial) {
   createInitialMigration(name, isRemote, shouldApply);
 } else {
   createMigration(name, isRemote, shouldApply);
+}
+
+if (shouldClear) {
+  clearMigrations();
+  process.exit(0);
 }
