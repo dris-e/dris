@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Cloudflare Next.js Template",
     images: [
       {
-        url: "/assets/og.png",
+        url: "/assets/og-image.png",
         width: 1200,
         height: 630,
         alt: "Cloudflare Next.js Template",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Cloudflare Next.js Template",
     description: "A template for building a website with Cloudflare Next.js",
-    images: ["/assets/og.png"],
+    images: ["/assets/og-image.png"],
   },
 };
 

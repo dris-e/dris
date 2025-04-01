@@ -286,11 +286,11 @@ favicon.ico
 
 ### Adding OG Image
 
-Add an OG image to the `public/assets` folder in 1200x630px size, PNG format, and named `og.png`.
+Add an OG image to the `public/assets` folder in 1200x630px size, PNG format, and named `og-image.png`.
 
 ```
 /public/assets/
-og.png
+og-image.png
 ```
 
 ### Changing metadata
