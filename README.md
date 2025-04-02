@@ -26,6 +26,12 @@ Clone the repository:
 git clone https://github.com/Formscale/cloudflare-nextjs-template.git
 ```
 
+Install dependencies:
+
+```bash
+pnpm install
+```
+
 Set a database & branch name in the `config.ts` file.
 
 ```ts
