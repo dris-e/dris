@@ -12,5 +12,11 @@
       "database_name": "nextjs-template-db",
       "database_id": "ba98b044-d06b-4c39-966d-0f1b036f38f5"
     }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "BUCKET",
+      "bucket_name": "nextjs-template-bucket"
+    }
   ]
 }

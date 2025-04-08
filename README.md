@@ -6,6 +6,8 @@ A starter template for building a Next.js app with Cloudflare Pages.
 
 Sponsored by [Formscale](https://formscale.com).
 
+Note: Some commands may be incompatible with Windows machines.
+
 ## Included
 
 - Cloudflare D1/R2
@@ -32,11 +34,12 @@ Install dependencies:
 pnpm install
 ```
 
-Set a database & branch name in the `config.ts` file.
+Set a site name, name, and branch name in the `src/constants/config.ts` file.
 
 ```ts
 const config = {
-  DB_NAME: "nextjs-template",
+  SITE_NAME: "Cloudflare Next.js Template",
+  NAME: "nextjs-template",
   MAIN_BRANCH: "master",
 } as const;
 
@@ -47,6 +50,12 @@ Generate types:
 
 ```bash
 pnpm run types
+```
+
+Generate Prisma client (if not starting fresh):
+
+```bash
+pnpm run generate
 ```
 
 Then, run the development server:
@@ -159,17 +168,54 @@ Generate Prisma client:
 pnpm run generate
 ```
 
+## Storage (R2)
+
+### Initial Setup
+
+Create a new bucket:
+
+```bash
+pnpm run create:bucket
+```
+
+Copy your bucket name to the `wrangler.jsonc` file.
+
+```json
+"r2_buckets": [
+  {
+    "binding": "BUCKET",
+    "bucket_name": "nextjs-template-bucket"
+  }
+]
+```
+
+Adding files to your bucket:
+
+```tsx
+import { getRequestContext } from "@cloudflare/next-on-pages";
+
+const { env } = getRequestContext();
+
+const key = "file.txt"; // unique identifier for the file
+const file = new TextEncoder().encode("Hello, world!"); // file content
+
+await env.BUCKET.put(key, file); // add file
+await env.BUCKET.get(key); // retrieve file
+await env.BUCKET.delete(key); // delete file
+await env.BUCKET.list(); // list all files
+```
+
 ## Add Custom Color
 
 Add a custom color to the `globals.css` file.
 
 ```css
 @theme inline {
-  --custom-color: var(--custom-color);
+  --color-custom: var(--color-custom); /* Change "custom" to your desired color name */
 }
 
 :root {
-  --custom-color: #0f0f11; /* Custom color */
+  --color-custom: #ffce00; /* Custom color */
 }
 ```
 

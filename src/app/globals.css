@@ -4,6 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-custom: var(--color-custom);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -44,7 +45,7 @@
 }
 
 :root {
-  --custom-color: #00ffff;
+  --color-custom: #ffce00;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
@@ -122,5 +123,11 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  ::selection {
+    @apply bg-custom;
+  }
+  ::-moz-selection {
+    @apply bg-custom;
   }
 }

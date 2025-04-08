@@ -3,6 +3,9 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always"
   },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
   "autoOpenWorkspace.enableAutoOpenIfSingleWorkspace": true,
   "autoOpenWorkspace.enableAutoOpenAlwaysFirst": true
 }

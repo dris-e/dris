@@ -52,10 +52,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-      <body className="font-geist-sans bg-background text-foreground relative tracking-tight w-full min-h-screen">
-        <Providers>{children}</Providers>
-      </body>
-    </html>
+    <Providers>
+      <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <body className="font-geist-sans bg-background text-foreground relative tracking-tight w-full min-h-screen">
+          {children}
+        </body>
+      </html>
+    </Providers>
   );
 }

@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const MIGRATIONS_DIR = path.join(__dirname, "../migrations");
-const DB_NAME = config.DB_NAME;
+const DB_NAME = config.NAME + "-db";
 
 function getNextMigration() {
   const files = fs.readdirSync(MIGRATIONS_DIR);
