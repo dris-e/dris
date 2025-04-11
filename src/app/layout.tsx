@@ -15,22 +15,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cloudflare Next.js Template",
-  description: "A template for building a website with Cloudflare Next.js",
-  keywords: ["cloudflare", "next.js", "template"],
+  title: "Cloudflare Next.js Static",
+  description: "A template for building a static site with Cloudflare Next.js",
+  keywords: ["cloudflare", "next.js", "static"],
   robots: "index, follow",
-  metadataBase: new URL("https://cloudflare-nextjs-template.com"),
+  metadataBase: new URL("https://cloudflare-nextjs-static.com"),
   openGraph: {
-    title: "Cloudflare Next.js Template",
-    description: "A template for building a website with Cloudflare Next.js",
-    url: "https://cloudflare-nextjs-template.com",
-    siteName: "Cloudflare Next.js Template",
+    title: "Cloudflare Next.js Static",
+    description: "A template for building a static site with Cloudflare Next.js",
+    url: "https://cloudflare-nextjs-static.com",
+    siteName: "Cloudflare Next.js Static",
     images: [
       {
         url: "/assets/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Cloudflare Next.js Template",
+        alt: "Cloudflare Next.js Static",
       },
     ],
     locale: "en_US",
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cloudflare Next.js Template",
-    description: "A template for building a website with Cloudflare Next.js",
+    title: "Cloudflare Next.js Static",
+    description: "A template for building a static site with Cloudflare Next.js",
     images: ["/assets/og-image.png"],
   },
 };

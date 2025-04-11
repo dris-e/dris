@@ -1,22 +1,9 @@
 {
-  "name": "cloudflare-nextjs-template",
+  "name": "cloudflare-nextjs-static",
   "compatibility_date": "2025-01-24",
   "compatibility_flags": ["nodejs_compat"],
   "pages_build_output_dir": ".vercel/output/static",
   "observability": {
     "enabled": true
-  },
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "nextjs-template-db",
-      "database_id": "ba98b044-d06b-4c39-966d-0f1b036f38f5"
-    }
-  ],
-  "r2_buckets": [
-    {
-      "binding": "BUCKET",
-      "bucket_name": "nextjs-template-bucket"
-    }
-  ]
+  }
 }
