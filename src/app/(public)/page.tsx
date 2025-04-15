@@ -18,11 +18,8 @@ export default function Home() {
       <p className="text-sm">Inspired by the Fruitger Aero aesthetic, early iPhone UI, & Jordan Singer.</p>
 
       <h2 className="font-mono mt-4">INSTALLATION</h2>
-      <p className="text-sm">The installation steps for these components are the same as shadcn/ui.</p>
-      <p className="text-sm">
-        Follow the steps in the link above, select the components you need, copy the code into your project, and
-        customize as desired.
-      </p>
+      <p className="text-sm">The installation for these components are the same as shadcn/ui.</p>
+      <p className="text-sm">Code after I finish stats homework.</p>
 
       <h2 className="font-mono mt-4">BUTTON</h2>
 

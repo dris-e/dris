@@ -49,3 +49,6 @@ worker-configuration.d.ts
 # wrangler
 .wrangler
 .wrangler/*
+
+# super secret
+src/app/(secret)

@@ -1,8 +1,8 @@
 # UI
 
-A minimalistic/skeuomorphic UI component library based off Shadcn/UI.
+![dris ui](./public/assets/og-image.png)
 
-Inspired by design from the early 2000s.
+A 2000s-style component library refreshed for the 21st century.
 
 ## Getting Started
 
