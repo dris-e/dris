@@ -1,9 +1,9 @@
 const config = {
-  SITE_NAME: "Cloudflare Next.js Static",
-  SITE_DESCRIPTION: "A starter template for building a static site with Next.js and Cloudflare Pages.",
-  NAME: "nextjs-static",
+  SITE_NAME: "UI/DRIS",
+  SITE_DESCRIPTION: "A 2000s-style component library refreshed for the 21st century.",
+  NAME: "ui",
   MAIN_BRANCH: "main",
-  SITE_URL: "https://cloudflare-nextjs-static.pages.dev",
+  SITE_URL: "https://ui.dris.one",
 } as const;
 
 export default config;

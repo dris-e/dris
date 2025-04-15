@@ -1,36 +1,40 @@
 import Providers from "@/components/providers";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 
+import config from "../constants/config";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetBrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Cloudflare Next.js Static",
-  description: "A template for building a static site with Cloudflare Next.js",
-  keywords: ["cloudflare", "next.js", "static"],
+  title: {
+    default: config.SITE_NAME,
+    template: "%s | " + config.SITE_NAME,
+  },
+  description: config.SITE_DESCRIPTION,
+  keywords: ["dris", "ui", "component", "library"],
   robots: "index, follow",
-  metadataBase: new URL("https://cloudflare-nextjs-static.com"),
+  metadataBase: new URL(config.SITE_URL),
   openGraph: {
-    title: "Cloudflare Next.js Static",
-    description: "A template for building a static site with Cloudflare Next.js",
-    url: "https://cloudflare-nextjs-static.com",
-    siteName: "Cloudflare Next.js Static",
+    title: config.SITE_NAME,
+    description: config.SITE_DESCRIPTION,
+    url: config.SITE_URL,
+    siteName: config.SITE_NAME,
     images: [
       {
         url: "/assets/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Cloudflare Next.js Static",
+        alt: config.SITE_NAME,
       },
     ],
     locale: "en_US",
@@ -38,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cloudflare Next.js Static",
-    description: "A template for building a static site with Cloudflare Next.js",
+    title: config.SITE_NAME,
+    description: config.SITE_DESCRIPTION,
     images: ["/assets/og-image.png"],
   },
 };
@@ -53,10 +57,8 @@ export default function RootLayout({
 }>) {
   return (
     <Providers>
-      <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <body className="font-geist-sans bg-background text-foreground relative tracking-tight w-full min-h-screen">
-          {children}
-        </body>
+      <html lang="en" className={`${inter.variable} ${jetBrainsMono.variable} antialiased`}>
+        <body className="font-inter bg-background text-foreground relative w-full min-h-screen">{children}</body>
       </html>
     </Providers>
   );

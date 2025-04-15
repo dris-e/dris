@@ -1,5 +1,5 @@
 {
-  "name": "cloudflare-nextjs-static",
+  "name": "dris-ui",
   "compatibility_date": "2025-01-24",
   "compatibility_flags": ["nodejs_compat"],
   "pages_build_output_dir": ".vercel/output/static",
