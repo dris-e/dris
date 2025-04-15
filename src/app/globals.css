@@ -45,7 +45,7 @@
 }
 
 :root {
-  --color-custom: #1500ff;
+  --color-custom: #2007ff;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
