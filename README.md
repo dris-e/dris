@@ -9,7 +9,7 @@ A 2000s-style component library refreshed for the 21st century.
 Clone the repository:
 
 ```bash
-git clone https://github.com/dris-e/ui.git
+git clone https://github.com/DRIS-LLC/ui.git
 ```
 
 Install dependencies:

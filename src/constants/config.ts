@@ -4,8 +4,8 @@ const config = {
   NAME: "ui",
   MAIN_BRANCH: "main",
   SITE_URL: "https://ui.dris.one",
-  GITHUB_URL: "https://github.com/dris-e/ui",
-  GITHUB_RAW_URL: "https://raw.githubusercontent.com/dris-e/ui/refs/heads/main/src/components/dris/",
+  GITHUB_URL: "https://github.com/DRIS-LLC/ui",
+  GITHUB_RAW_URL: "https://raw.githubusercontent.com/DRIS-LLC/ui/refs/heads/main/src/components/dris/",
   VARIANTS: ["daisy", "aqua", "lilac", "cherry", "silver", "lime", "frosted", "minimal"] as const,
 } as const;
 
