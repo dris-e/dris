@@ -1,6 +1,6 @@
 # UI
 
-![dris ui](./public/assets/og-image.png)
+![UI/DRIS](./public/assets/og-image.png)
 
 A 2000s-style component library refreshed for the 21st century.
 

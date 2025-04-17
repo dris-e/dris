@@ -1,0 +1,141 @@
+import { Button } from "@/components/dris/button";
+import ComponentContainer from "@/components/component-container";
+import MdxLayout from "@/components/mdx-layout";
+import config from "@/constants/config";
+import {
+  ButtonExample,
+  BadgeExample,
+  Card1Example,
+  Card2Example,
+  InputExample,
+  TextareaExample,
+} from "@/components/dris/examples";
+import { Snippet, Code } from "@/components/snippet";
+import { Badge } from "@/components/dris/badge";
+import { Input } from "@/components/dris/input";
+import { Textarea } from "@/components/dris/textarea";
+import { Star } from "@/components/star";
+
+<Star />
+
+## STRAIGHT FROM Y2K.
+
+A 2000s-style component library refreshed for the 21st century.
+
+_Inspired by the Fruitger Aero aesthetic, early iPhone UI, & [Jordan Singer](https://x.com/jsngr)._
+
+### INSTALLATION
+
+The base installation for these components are the same as [shadcn/ui](https://ui.shadcn.com/docs/installation).
+
+To get started, add the following config files to your project:
+
+<Snippet name="variants.ts"></Snippet>
+
+<Snippet name="variant-class.ts"></Snippet>
+
+### BUTTON
+
+<ComponentContainer>
+  {config.VARIANTS.map((variant) => (
+    <Button key={variant} variant={variant}>
+      {variant}
+    </Button>
+  ))}
+</ComponentContainer>
+
+#### CODE
+
+<Code>pnpm dlx shadcn@latest add button</Code>
+
+<Snippet name="button.tsx"></Snippet>
+
+#### EXAMPLES
+
+<ButtonExample />
+
+<Snippet name="examples/button.tsx"></Snippet>
+
+### BADGE
+
+<ComponentContainer>
+  {config.VARIANTS.map((variant) => (
+    <Badge key={variant} variant={variant}>
+      {variant}
+    </Badge>
+  ))}
+</ComponentContainer>
+
+#### CODE
+
+<Code>pnpm dlx shadcn@latest add badge</Code>
+
+<Snippet name="badge.tsx"></Snippet>
+
+#### EXAMPLES
+
+<BadgeExample />
+
+<Snippet name="examples/badge.tsx"></Snippet>
+
+### CARD
+
+<Card1Example />
+
+<Snippet name="examples/card1.tsx"></Snippet>
+
+#### CODE
+
+<Code>pnpm dlx shadcn@latest add card</Code>
+
+<Snippet name="card.tsx"></Snippet>
+
+#### EXAMPLES
+
+<Card2Example />
+
+<Snippet name="examples/card2.tsx"></Snippet>
+
+### INPUT
+
+<ComponentContainer>
+  <Input placeholder="Search for anything.." className="w-full max-w-md" />
+</ComponentContainer>
+
+#### CODE
+
+<Code>pnpm dlx shadcn@latest add input</Code>
+
+<Snippet name="input.tsx"></Snippet>
+
+#### EXAMPLES
+
+<InputExample />
+
+<Snippet name="examples/input.tsx"></Snippet>
+
+### TEXTAREA
+
+<ComponentContainer>
+  <Textarea placeholder="What inspires you? (optional)" className="w-full max-w-md" />
+</ComponentContainer>
+
+#### CODE
+
+<Code>pnpm dlx shadcn@latest add textarea</Code>
+
+<Snippet name="textarea.tsx"></Snippet>
+
+#### EXAMPLES
+
+<TextareaExample />
+
+<Snippet name="examples/textarea.tsx"></Snippet>
+
+### MORE SOON.
+
+<Star text="Leave a star?" />
+
+export default function MDXPage({ children }) {
+  return <MdxLayout>{children}</MdxLayout>;
+}

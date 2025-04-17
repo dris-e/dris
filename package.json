@@ -19,10 +19,14 @@
     "logs": "wrangler tail",
     "format": "prettier --write .",
     "runtime:comment": "node scripts/toggle-runtime.js comment",
-    "runtime:uncomment": "node scripts/toggle-runtime.js uncomment"
+    "runtime:uncomment": "node scripts/toggle-runtime.js uncomment",
+    "registry:build": "shadcn build"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.3.0",
     "@radix-ui/react-accordion": "^1.2.4",
     "@radix-ui/react-avatar": "^1.1.4",
     "@radix-ui/react-dialog": "^1.1.7",
@@ -36,6 +40,7 @@
     "@radix-ui/react-switch": "^1.1.4",
     "@radix-ui/react-tooltip": "^1.2.0",
     "@tailwindcss/cli": "^4.1.4",
+    "@types/mdx": "^2.0.13",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.485.0",
@@ -54,12 +59,14 @@
     "@cloudflare/next-on-pages": "^1.13.12",
     "@eslint/eslintrc": "^3.3.1",
     "@tailwindcss/postcss": "^4.1.4",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20.17.30",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "eslint": "^9.24.0",
     "eslint-config-next": "15.2.1",
     "eslint-plugin-next-on-pages": "^1.13.12",
+    "postcss": "^8.5.3",
     "tailwindcss": "^4.1.4",
     "typescript": "^5.8.3",
     "wrangler": "^4.11.0"
