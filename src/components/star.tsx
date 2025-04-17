@@ -6,7 +6,7 @@ import { Button } from "./dris/button";
 export function Star({ text = "Star on Github" }: { text?: string }) {
   return (
     <Link href={config.GITHUB_URL} target="_blank">
-      <Button variant="daisy" rounded="sm" className="text-sm">
+      <Button variant="daisy" rounded="sm" className="text-sm no-prose">
         {text}
         <StarIcon />
       </Button>

@@ -24,6 +24,7 @@ export function Input({ ...props }: InputProps) {
           inputVariants({ size, variant, rounded }),
           baseStyles.border,
           baseStyles.animate,
+          "text-sm",
           { "text-white": variant === "silver", "placeholder:text-gray-200": variant === "silver" },
           className
         )}

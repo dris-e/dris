@@ -22,14 +22,14 @@ export function Card({ ...props }: CardProps) {
   const { className, variant, size, rounded } = props;
 
   return (
-    <div className={cn(cardVariants({ variant, size, rounded }), baseStyles.animate, "border-none", className)}>
+    <div className={cn(cardVariants({ variant, size, rounded }), baseStyles.animate, "w-full border-none", className)}>
       <BaseCard
         data-slot="card"
         {...props}
         className={cn(
           cardVariants({ rounded }),
           baseStyles.animate,
-          "bg-white px-0 hover:bg-white w-sm gap-3 pb-6",
+          "bg-white px-0 hover:bg-white gap-3 pb-6",
           "has-[>div[data-slot='card-footer']]:pb-3",
           className
         )}

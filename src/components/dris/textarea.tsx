@@ -24,7 +24,7 @@ export function Textarea({ ...props }: TextareaProps) {
           inputVariants({ size, variant, rounded }),
           baseStyles.border,
           baseStyles.animate,
-          "resize-none h-32 py-2.5",
+          "resize-none h-32 py-2.5 text-sm",
           { "text-white": variant === "silver", "placeholder:text-gray-200": variant === "silver" },
           className
         )}
