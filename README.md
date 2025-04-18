@@ -1,15 +1,13 @@
-# UI
+# dris.one
 
-![UI/DRIS](./public/assets/og-image.png)
-
-A 2000s-style component library refreshed for the 21st century.
+My personal site. (WIP)
 
 ## Getting Started
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/DRIS-LLC/ui.git
+git clone https://github.com/DRIS-LLC/dris.git
 ```
 
 Install dependencies:

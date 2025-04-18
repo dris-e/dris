@@ -1,0 +1,95 @@
+import ComponentContainer from "@/components/component-container";
+import { Badge } from "@/components/dris/badge";
+import { Button } from "@/components/dris/button";
+import MdxLayout from "@/components/mdx-layout";
+import { Snippet } from "@/components/snippet";
+import { calculateAge, calculateDays, tenYears } from "@/lib/utils";
+
+## RESOURCES
+
+links i've found interesting, helpful, inspiring, or cool (chrome bookmarks).
+
+#### UPDATED 4/17/2025
+
+- [vinay.sh](https://vinay.sh/) - cofounder of loom
+- [ion.design](https://ion.design/) - cool design tool
+- [f.inc](https://f.inc/) - startup accelerator
+- [taskformer.com](https://taskformer.com/) - student internships
+- [delve.co](https://delve.co/) - automated cybersecurity
+- [benchling.com](https://www.benchling.com/) - biotech software (by 2 guys with 0 experience)
+- [memorisely.com](https://www.memorisely.com/) - nice design
+- [out.so](https://out.so/) - wish i thought of this
+- [poirrier.ca](https://www.poirrier.ca/) - good courses
+- [suffe.cool](http://suffe.cool/) - the goat
+- [sfcompute/repositories](https://github.com/orgs/sfcompute/repositories) - sfcompute
+- [farza.com](https://farza.com/) - pretty inspiring
+- [sr.a16z.com](https://sr.a16z.com/) - i will finish my app i promise
+- [spacetypegenerator.com](https://spacetypegenerator.com/) - make cool type animations
+- [tailscale.com](https://tailscale.com/) - seems cool
+- [diskprices.com](https://diskprices.com/) - function >>> form
+- [react-ui-libraries](https://react-ui-libraries.vercel.app/) - react ui libraries
+- [mainfra.me](https://mainfra.me/) - crazy site
+- [ui.3x.gl](https://ui.3x.gl/) - simple components
+- [fullstory.com](https://www.fullstory.com/) - interesting idea
+- [brutalistwebsites.com](https://brutalistwebsites.com/) - some web inspiration
+- [beem.computer](https://beem.computer/) - waiting to see what this is
+- [outerbase.com](https://www.outerbase.com/) - nice site
+- [carter.red](https://carter.red/) - could be the goat
+- [agpt.co](https://agpt.co/) - very unique site
+- [makelemonade.gg](https://makelemonade.gg/) - interesting idea
+- [formia.so](https://www.formia.so/new) - gatekeeping from hudson
+- [prod.so](https://www.prod.so/) - might apply
+- [ibuildmyideas.com](https://ibuildmyideas.com/) - love his designs
+- [reactflow.dev](https://reactflow.dev/) - cool library for automations
+- [sfcompute.com](https://sfcompute.com/) - this is the type of company i'd want to start
+- [superwall.com](https://superwall.com/) - simple app paywalls
+- [xitanggg/open-resume](https://github.com/xitanggg/open-resume?tab=AGPL-3.0-1-ov-file) - resume builder
+- [linkup.so](https://www.linkup.so/) - i like the site
+- [banderson/viral-app-playbook](https://docs.google.com/document/d/1hzkXItqc3AuWs59QEP4V42fM45G4_jWJ73Uiqk62pjs/edit?tab=t.r8rc6wq6z6pb) - some insight here
+- [whitescreen.online](https://www.whitescreen.online/) - i use this on video calls
+- [dayjob.work](https://dayjob.work/) - cool site
+- [heymeta.com](https://www.heymeta.com/) - check site metadata
+- [twohands.studio](https://www.twohands.studio/) - site inspiration
+- [supergood.ai](https://www.supergood.ai/) - interesting idea
+- [huzzler.so](https://huzzler.so/) - new fav site
+- [betterstack.com](https://betterstack.com/) - like the site
+- [swagmagic.com](https://www.swagmagic.com/) - they cold emailed me
+- [wholesale.houseofblanks.com](https://wholesale.houseofblanks.com/catalogue) - great ecom design
+- [776.org](https://776.org/) - fellowship
+- [firecrawl.dev](https://www.firecrawl.dev/) - interesting idea
+- [mi.css](https://github.com/FelipeIzolan/mi.css) - lightweight css
+- [canine.sh](https://canine.sh/) - heard about this
+- [horizon.netscout.com](https://horizon.netscout.com/) - looks cool
+- [openstatus.dev](https://www.openstatus.dev/) - all systems operational
+- [pointer.so](https://pointer.so/) - cool idea
+- [usevelvet.com](https://www.usevelvet.com/) - liked the site
+- [tradingeconomics.com](https://tradingeconomics.com/united-states/calendar) - us economic calendar
+- [openchangelog.com](https://openchangelog.com/) - make changelogs
+- [gsap.com](https://gsap.com/) - haven't check out yet
+- [devicon.dev](https://devicon.dev/) - other logo svgs
+- [brandbird.app](https://www.brandbird.app/tools/svg-company-logos) - logo svgs
+- [stytch.com](https://stytch.com/) - 1 of 20 auth tools
+- [grafana.com](https://grafana.com/) - observability dashboard
+- [icon.me](https://icon.me/) - interesting
+- [realestic.framer.website](https://realestic.framer.website/) - wonder how this went
+- [html.spec.whatwg.org](https://html.spec.whatwg.org/multipage/) - html spec
+- [svg2ico.com](https://svg2ico.com/) - convert svgs to ico
+- [graphicdesignforum.com](https://www.graphicdesignforum.com/) - better than reddit
+- [mentara.io](https://www.mentara.io/user/home) - actually a good site for mock interviews
+- [hyperbrowser.ai](https://www.hyperbrowser.ai/) - shoutout shri
+- [mintlify.com](https://mintlify.com/) - easy docs
+- [quant-next.com](https://quant-next.com/the-merton-jump-diffusion-model/) - options price inefficiencies
+- [medium.datadriveninvestor.com](https://medium.datadriveninvestor.com/i-needed-money-so-i-started-qdata-trading-deb1c1f31efc) - mjd implementation
+- [events.ycombinator.com](https://events.ycombinator.com/ai-sus) - yc startup school
+- [dormroomfund.com](https://dormroomfund.com/) - student fund
+- [emilkowal.ski](https://emilkowal.ski/) - nice site + good resources
+- [refgrow.com](https://refgrow.com/) - interesting idea
+- [gitingest.com](https://gitingest.com/) - unique design
+- [nosu.io](https://www.nosu.io/) - find hackathons
+- [epicrhettmanifesto/home](https://sites.google.com/view/epicrhettmanifesto/home) - interesting
+- [panflights.com](https://panflights.com/en/) - cheaper flights
+- [twilio-labs/call-gpt](https://github.com/twilio-labs/call-gpt) - cool project
+
+export default function MDXPage({ children }) {
+  return <MdxLayout>{children}</MdxLayout>;
+}

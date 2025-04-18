@@ -1,140 +1,113 @@
-import { Button } from "@/components/dris/button";
 import ComponentContainer from "@/components/component-container";
-import MdxLayout from "@/components/mdx-layout";
-import config from "@/constants/config";
-import {
-  ButtonExample,
-  BadgeExample,
-  Card1Example,
-  Card2Example,
-  InputExample,
-  TextareaExample,
-} from "@/components/dris/examples";
-import { Snippet, Code } from "@/components/snippet";
 import { Badge } from "@/components/dris/badge";
-import { Input } from "@/components/dris/input";
-import { Textarea } from "@/components/dris/textarea";
-import { Star } from "@/components/star";
+import { Button } from "@/components/dris/button";
+import MdxLayout from "@/components/mdx-layout";
+import { Snippet } from "@/components/snippet";
+import { calculateAge, calculateDays, tenYears } from "@/lib/utils";
 
-<Star />
+## HEY, I'M DRIS{<span className="animate-caret-blink">.</span>}
 
-## STRAIGHT FROM Y2K.
+i'm {calculateAge()}, from minnesota.
 
-A 2000s-style component library refreshed for the 21st century.
+i've been building things for {calculateDays().toLocaleString()} days.
 
-_Inspired by the Fruitger Aero aesthetic, early iPhone UI, & [Jordan Singer](https://x.com/jsngr)._
+#### A FEW ACHIEVEMENTS:
 
-### INSTALLATION
+- yt channel with 200k subscribers and 160m views
+- 50k/month [ecom store](https://web.archive.org/web/20230110214901/https://www.headfoams.pro/) selling fake airpod maxes
+- won the congressional app challenge at [10](https://www.congressionalappchallenge.us/2018-mn3/)
+- hacked a $100m organization (rhymes with [deca](https://www.deca.org/))
+- sold [an app](https://lira.study) for below minimum wage
 
-The base installation for these components are the same as [shadcn/ui](https://ui.shadcn.com/docs/installation).
+#### SOME PROJECTS I'M WORKING ON:
 
-To get started, add the following config files to your project:
+- [ui.dris.one](https://ui.dris.one) - 2000s inspired component library
+- [pipeli.me](https://pipeli.me) - digital passports for energy assets
+- [twin.ad](https://twin.ad) - sell your likeness for ai ads
+- [usestep.ai](https://usestep.ai) - ai simulation platform
 
-<Snippet name="variants.ts"></Snippet>
+i start lots of projects and finish very few. i don't believe in sunk cost. this list will probably be pretty different next time you see it.
 
-<Snippet name="variant-class.ts"></Snippet>
+#### TLDR:
 
-### BUTTON
+one of my earliest memories was selling toys in 1st grade.
 
-<ComponentContainer>
-  {config.VARIANTS.map((variant) => (
-    <Button key={variant} variant={variant}>
-      {variant}
-    </Button>
-  ))}
-</ComponentContainer>
+i've had nearly every side hustle since. making clothes, selling snacks, designing logos, & editing videos are a few.
 
-#### CODE
+i'm a fan of the process. i love turning basic ideas into something great.
 
-<Code>pnpm dlx shadcn@latest add button</Code>
+<Snippet title="HOW I STARTED">
+i taught myself to code summer of 6th grade.
 
-<Snippet name="button.tsx"></Snippet>
+i "launched" my first app, lemonayd ([lemonaid](https://www.lemonaid.com/) was taken) later that year.
 
-#### EXAMPLES
+it was a fundraising app for schools. i became one of the youngest winners of the [congressional app challenge](https://www.congressionalappchallenge.us/) from my submission.
 
-<ButtonExample />
+i recently got into startups (mid-2023) after watching [this video](https://www.youtube.com/watch?v=4VDZRR07Eqw).
 
-<Snippet name="examples/button.tsx"></Snippet>
+one of my earliest ambitions was to "invent" something. the idea of creating things that other people could use seemed pretty interesting.
 
-### BADGE
+i always knew this is what i wanted to do.
 
-<ComponentContainer>
-  {config.VARIANTS.map((variant) => (
-    <Badge key={variant} variant={variant}>
-      {variant}
-    </Badge>
-  ))}
-</ComponentContainer>
+</Snippet>
 
-#### CODE
+<Snippet title="MY GOAL">
+creating a product so seamless you never notice it. something like a coffee cup, chair, street light, etc.
 
-<Code>pnpm dlx shadcn@latest add badge</Code>
+something that provides value & is used so frequently it becomes a part of someone's life without questioning it.
 
-<Snippet name="badge.tsx"></Snippet>
+[dieter rams](https://en.wikipedia.org/wiki/Dieter_Rams) said "the best design is invisible". i always think about that.
 
-#### EXAMPLES
+probably something in tech/science.
 
-<BadgeExample />
+</Snippet>
 
-<Snippet name="examples/badge.tsx"></Snippet>
+<Snippet title="MY MOTIVATIONS">
+i've never really been driven by money. i read this on a fortune cookie from panda express a few years ago. something like "money is a means to an end, not the end itself". i completely agree.
 
-### CARD
+for now, i do it to improve myself. maybe for the love of the game. i'm always trying to be the best i can in everything i do.
 
-<Card1Example />
+i've been fortunate enough to never have to worry about food, money, housing, or education. so maybe this changes in the future. but i was never after fancy cars or nice watches like most people around my age.
 
-<Snippet name="examples/card1.tsx"></Snippet>
+i think this is mindset is becoming more common, but i'd just like to get to the point where i can live without having to worry about money. just keep it simple.
 
-#### CODE
+</Snippet>
 
-<Code>pnpm dlx shadcn@latest add card</Code>
+<Snippet title={`WHERE I SEE MYSELF IN ${tenYears().toLocaleString()} DAYS`}>
+in 10 years, running a company or in vc.
 
-<Snippet name="card.tsx"></Snippet>
+i move around a lot, so not sure if i'd get the most value sticking to 1 thing for many years. i enjoy creating & selling.
 
-#### EXAMPLES
+maybe not going to college. so can't say for sure where i end up.
 
-<Card2Example />
+ive been hustling my whole life. im sure ill figure something out.
 
-<Snippet name="examples/card2.tsx"></Snippet>
+</Snippet>
 
-### INPUT
+#### MY PREVIOUS VENTURES:
 
-<ComponentContainer>
-  <Input placeholder="Search for anything.." className="w-full max-w-md" />
-</ComponentContainer>
+- (2025) [formscale.dev](https://formscale.dev) - open-source form backend
+- (2024) [lira.study](https://lira.study) - ai study tool (acquired)
+- (2024) [parkt.app](https://parkt.app) - parking marketplace app
+- (2022-) [dris.llc](https://dris.llc) - marketing & brand dev
+- (2023-2025) [sparkhs.org](https://sparkhs.org) - hs business competition
+- (2018-2019) [thelemonayd.com](https://app.thelemonayd.com) - school fundraising app
 
-#### CODE
+#### SOME PROJECTS I'VE WORKED ON:
 
-<Code>pnpm dlx shadcn@latest add input</Code>
+- (2025) [worldkeepsspinning®](https://dris-e.github.io/worldspin) - site for a friend (wip)
+- (2024) [quarter.nyc](https://quarter.nyc) - made the logo
+- (2024) [collegerejections.com](https://collegerejections.com) - post college rejections
+- (2024) [theinternetgradient.com](https://theinternetgradient.com) - multiplayer gradient
+- (2023) [nearcams.org](https://nearcams.org) - traffic cams in mn
+- (2017) [thunderdynamics.biz](https://thunderdynamics.biz) - first "company" - sold speakers
 
-<Snippet name="input.tsx"></Snippet>
+#### DIRECTORY:
 
-#### EXAMPLES
-
-<InputExample />
-
-<Snippet name="examples/input.tsx"></Snippet>
-
-### TEXTAREA
-
-<ComponentContainer>
-  <Textarea placeholder="What inspires you? (optional)" className="w-full max-w-md" />
-</ComponentContainer>
-
-#### CODE
-
-<Code>pnpm dlx shadcn@latest add textarea</Code>
-
-<Snippet name="textarea.tsx"></Snippet>
-
-#### EXAMPLES
-
-<TextareaExample />
-
-<Snippet name="examples/textarea.tsx"></Snippet>
-
-### MORE SOON.
-
-<Star text="Leave a star?" />
+- [contact](/contact)
+- [resources](/resources)
+- [gallery](/gallery)
+- [radio](/radio)
 
 export default function MDXPage({ children }) {
   return <MdxLayout>{children}</MdxLayout>;

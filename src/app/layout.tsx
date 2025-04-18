@@ -1,4 +1,3 @@
-import Providers from "@/components/providers";
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 
@@ -56,10 +55,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <Providers>
-      <html lang="en" className={`${inter.variable} ${jetBrainsMono.variable} antialiased`}>
-        <body className="font-inter bg-background text-foreground relative w-full min-h-screen">{children}</body>
-      </html>
-    </Providers>
+    <html lang="en" className={`${inter.variable} ${jetBrainsMono.variable} antialiased`}>
+      <body className="font-inter bg-background text-foreground relative w-full min-h-screen">{children}</body>
+    </html>
   );
 }

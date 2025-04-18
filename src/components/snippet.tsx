@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
-import { useComponent } from "../hooks/use-component";
 
 function DefaultButton({
   children,
@@ -21,8 +20,7 @@ function DefaultButton({
       variant="ghost"
       className={cn(
         "p-0 rounded-none hover:text-gray-600 text-xs h-auto cursor-pointer font-mono hover:underline",
-        absolute && "absolute top-2.5 right-3 underline",
-        disabled && "cursor-not-allowed"
+        absolute && "absolute top-2.5 right-3 underline"
       )}
       onClick={onClick}
       disabled={disabled}
@@ -32,56 +30,34 @@ function DefaultButton({
   );
 }
 
-export function Code({ children, disabled }: { children: React.ReactNode; disabled?: boolean }) {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = () => {
-    if (!children) return;
-
-    navigator.clipboard.writeText(children as string);
-    setCopied(true);
-
-    setTimeout(() => {
-      setCopied(false);
-    }, 2000);
-  };
+export function Snippet({ children, title }: { children: React.ReactNode; title?: string }) {
+  const [open, setOpened] = useState(false);
 
   return (
-    <div className="relative w-full mb-4">
-      <DefaultButton onClick={handleCopy} absolute disabled={disabled}>
-        {copied ? "COPIED" : "COPY"}
+    <div className="relative w-full mb-4 shadow-xs">
+      <DefaultButton onClick={() => setOpened(!open)} absolute>
+        {open ? "CLOSE" : "OPEN"}
       </DefaultButton>
-      <pre className="bg-gray-50 not-prose w-full font-mono text-xs p-3 py-2.5 border border-gray-200 text-gray-600 scroll-smooth overflow-auto max-h-48">
-        {children}
+      <pre
+        className={cn(
+          "bg-gray-50 prose-p:last-of-type:mb-0 w-full font-mono text-xs p-3 py-2.5 border border-gray-200 text-gray-600 scroll-smooth overflow-hidden overflow-y-auto",
+          !open && "cursor-pointer hover:underline"
+        )}
+        onClick={!open ? () => setOpened(!open) : undefined}
+      >
+        <div className="w-full text-wrap">
+          {open ? (
+            <>
+              {title}
+              {children}
+            </>
+          ) : (
+            title
+          )}
+        </div>
       </pre>
     </div>
   );
 }
 
-export function Snippet({ name }: { name: string }) {
-  const [showCode, setShowCode] = useState(false);
-  const { code, loading, error, fetchCode, hasLoaded } = useComponent(name);
-
-  const handleToggle = async () => {
-    if (!hasLoaded && !loading) {
-      await fetchCode();
-    }
-    setShowCode(!showCode);
-  };
-
-  return (
-    <Code disabled={!hasLoaded && !loading}>
-      {showCode ? (
-        loading ? (
-          "LOADING..."
-        ) : error ? (
-          `ERROR: ${error}`
-        ) : (
-          code
-        )
-      ) : (
-        <DefaultButton onClick={handleToggle}>LOAD SNIPPET ({name})</DefaultButton>
-      )}
-    </Code>
-  );
-}
+// prose-p:first-of-type:mt-0

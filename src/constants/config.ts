@@ -1,12 +1,14 @@
 const config = {
-  SITE_NAME: "UI/DRIS",
-  SITE_DESCRIPTION: "A 2000s-style component library refreshed for the 21st century.",
-  NAME: "ui",
+  SITE_NAME: "DRIS ELAMRI",
+  SITE_DESCRIPTION: "dris elamri. 17y/o entrepreneur, developer, designer, & creator from minnesota.",
   MAIN_BRANCH: "main",
-  SITE_URL: "https://ui.dris.one",
-  GITHUB_URL: "https://github.com/DRIS-LLC/ui",
-  GITHUB_RAW_URL: "https://raw.githubusercontent.com/DRIS-LLC/ui/refs/heads/main/src/components/dris/",
-  VARIANTS: ["daisy", "aqua", "lilac", "cherry", "silver", "lime", "frosted", "minimal"] as const,
+  SITE_URL: "https://dris.one",
+  HEADER: {
+    contact: "/contact",
+    linkedin: "https://www.linkedin.com/in/driselamri/",
+    github: "https://github.com/dris-e",
+    twitter: "https://x.com/driselamri",
+  },
 } as const;
 
 export default config;
