@@ -40,7 +40,7 @@ export function Snippet({ children, title }: { children: React.ReactNode; title?
       </DefaultButton>
       <pre
         className={cn(
-          "bg-gray-50 prose-p:last-of-type:mb-0 w-full font-mono text-xs p-3 py-2.5 border border-gray-200 text-gray-600 scroll-smooth overflow-hidden overflow-y-auto",
+          "bg-gray-50 prose-p:last-of-type:mb-0 w-full font-mono text-xs p-3 py-2.5 border border-gray-200 text-gray-600 scroll-smooth overflow-auto",
           !open && "cursor-pointer hover:underline"
         )}
         onClick={!open ? () => setOpened(!open) : undefined}

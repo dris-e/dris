@@ -33,14 +33,14 @@ export default function Form() {
     })
       .then((response) => {
         if (response.ok) {
-          setStatus("form submitted. i'll get back to you asap");
+          setStatus("form submitted. i'll respond asap.");
           form.reset();
 
           // Handle success (ex: redirect to success page)
         } else {
           return response.json().then((data: { error: string | string[] }) => {
             const error = data.error || "submission failed. please try again.";
-            setStatus(Array.isArray(error) ? error.join(", ") : error);
+            setStatus(Array.isArray(error) ? error.join(", ") : error.toLowerCase());
           });
         }
       })
@@ -56,9 +56,16 @@ export default function Form() {
     <ComponentContainer>
       <form className="flex flex-col gap-2 w-full max-w-sm" onSubmit={handleSubmit}>
         <Label htmlFor="email">email*</Label>
-        <Input id="email" variant="minimal" placeholder="elamri@dris.llc" required />
+        <Input id="email" name="email" variant="minimal" placeholder="elamri@dris.llc" required />
         <Label htmlFor="message">message*</Label>
-        <Textarea id="message" variant="minimal" placeholder="write a message.." minLength={5} required />
+        <Textarea
+          id="message"
+          name="message"
+          variant="minimal"
+          placeholder="write a message.."
+          minLength={5}
+          required
+        />
         <Input id="honeypot" variant="minimal" placeholder="honey" className="hidden" />
         {status && <p className="text-sm text-gray-500 mb-2">{status}</p>}
         <Button variant="aqua" rounded="md" type="submit" disabled={isSubmitting}>
