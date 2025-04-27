@@ -15,10 +15,19 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.removeUnusedImports": "always",
-      "source.removeUnusedVariables": "always",
-      "source.fixAll": "always",
-      "source.organizeImports": "always"
+      "source.removeUnusedImports": "explicit",
+      "source.removeUnusedVariables": "explicit",
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit",
+      "source.format": "explicit"
+    },
+    "[mdx]": {
+      "editor.codeActionsOnSave": {
+        "source.removeUnusedImports": "never",
+        "source.removeUnusedVariables": "never",
+        "source.fixAll": "never",
+        "source.organizeImports": "never"
+      }
     },
 
     "eslint.run": "onType",

@@ -56,7 +56,7 @@ export default function Form() {
     <ComponentContainer>
       <form className="flex flex-col gap-2 w-full max-w-sm" onSubmit={handleSubmit}>
         <Label htmlFor="email">email*</Label>
-        <Input id="email" name="email" variant="minimal" placeholder="elamri@dris.llc" required />
+        <Input id="email" name="email" type="email" variant="minimal" placeholder="elamri@dris.llc" required />
         <Label htmlFor="message">message*</Label>
         <Textarea
           id="message"
