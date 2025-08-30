@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     default: config.SITE_NAME,
     template: "%s | " + config.SITE_NAME,
   },
+  icons: {
+    icon: "/assets/favicon.ico",
+  },
   description: config.SITE_DESCRIPTION,
   keywords: ["dris", "ui", "component", "library"],
   robots: "index, follow",
@@ -46,8 +49,6 @@ export const metadata: Metadata = {
     images: ["/assets/og-image.png"],
   },
 };
-
-export const runtime = "edge";
 
 export default function RootLayout({
   children,
