@@ -6,26 +6,28 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 const birthDate = new Date("2007-07-05");
-const today = new Date();
 
 export function calculateAge() {
-  let age = today.getFullYear() - birthDate.getFullYear();
-  const m = today.getMonth() - birthDate.getMonth();
-  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+  const now = new Date();
+  let age = now.getFullYear() - birthDate.getFullYear();
+  const m = now.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && now.getDate() < birthDate.getDate())) {
     age--;
   }
   return age;
 }
 
 export function calculateDays() {
-  const days = Math.floor((today.getTime() - birthDate.getTime()) / (1000 * 60 * 60 * 24));
+  const now = new Date();
+  const days = Math.floor((now.getTime() - birthDate.getTime()) / (1000 * 60 * 60 * 24));
   return days;
 }
 
 export function tenYears() {
+  const now = new Date();
   const targetDate = new Date("2035-04-12"); // from april 12th, 2025
 
-  const timeDiff = targetDate.getTime() - today.getTime();
+  const timeDiff = targetDate.getTime() - now.getTime();
   const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
 
   return daysDiff > 0 ? daysDiff : 0;
