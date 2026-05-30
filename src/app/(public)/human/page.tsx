@@ -3,7 +3,7 @@ import Human from "./human.mdx";
 
 export const metadata: Metadata = {
   title: "HUMAN",
-  description: "what if we could become 100% human?",
+  description: "saving humanity",
 };
 
 export default function HumanPage() {
