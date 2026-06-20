@@ -1,0 +1,30 @@
+import ComponentContainer from "@/components/component-container";
+import { Badge } from "@/components/dris/badge";
+import { Button } from "@/components/dris/button";
+import MdxLayout from "@/components/mdx-layout";
+import { Snippet } from "@/components/snippet";
+import { calculateAge, calculateDays, tenYears } from "@/lib/utils";
+
+## WHAT'S IMPOSSIBLE?
+
+if you realize that everything around us was once "impossible," you notice that people seem to confuse what hasn't been done with what's _impossible_.
+
+off the top of my head,
+
+- every form of transportation
+- phones
+- computers
+- internet
+- printing
+- medicine
+- ...
+
+our definition of impossible is only based on what's already been done
+
+so what hasn't been done usually falls into the category of "impossible"
+
+why work on "hard" things (which we know are possible) when the impossible exists?
+
+export default function MDXPage({ children }) {
+  return <MdxLayout>{children}</MdxLayout>;
+}
